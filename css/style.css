@@ -1,3 +1,6 @@
+.body {
+
+}
 .inline-block {
     display: inline-block;
     vertical-align: top;
@@ -21,7 +24,7 @@
 
 nav {
     width: 70%;
-    height:65px;
+    height: 65px;
     background-color: black;
     font-family: 'Playfair Display', serif;
     margin-left: -4px;
@@ -29,7 +32,7 @@ nav {
 
 ul {
     width: auto;
-    color: white;    
+    color: white;
 }
 
 li {
@@ -40,19 +43,48 @@ li {
 .heroImg {
     height: 25%;
     padding: 25px;
+    text-align: center;
 }
 
 .hero {
     height: 300px;
+    object-fit: cover;
 }
 
 .content {
-    width: 400px;
+    display: flex;
+    flex-direction: row;
+    /* width: fit-content;
     padding: 2%;
-    margin: 0 auto;
+    margin: 0 auto; */
     font-family: 'DM Sans', sans-serif;
     font-size: small;
-    box-shadow: 20px 20px 60px 10px pink inset;
+    /* box-shadow: 20px 20px 60px 5px pink; */
+}
+
+.content>p {
+    margin: 20px 10px;
+    padding: 10px;
+    position: relative;
+    width: 500px;
+
+}
+
+.content>button {
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+}
+
+button {
+    border-radius: 50px;
+    background: var(--Portfolio-Teal, #1F4E58);
+    color: whitesmoke;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
 }
 
 footer {
@@ -107,25 +139,44 @@ h3 {
     border-radius: 14px;
     font-size: smaller;
     background: #F4F7FA;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* <!--  My UX Skills section coded using CSS flex --> */
 
 .workGrid {
     display: grid;
-    grid-template-columns: 50% 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "img csa"
-        "img2 mhs"
-        "img3 cs3";
+        "cs1 cs1"
+        "cs2 cs2";
     align-items: center;
-    justify-content: center;
+    text-align: center;
+    font-size: medium;
 }
 
+.card1 {
+    border-radius: 14px;
+    border: 1px solid #AAA;
+    background: rgba(139, 112, 65, 0.35);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 2%;
+    grid-area: cs1;
+    display: flex;
+}
+
+.card2 {
+    border-radius: 14px;
+    border: 1px solid #AAA;
+    background: rgba(139, 112, 65, 0.35);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 2%;
+    grid-area: cs2;
+    display:flex
+}
+
+
 .csaImg {
-    grid-area: img;
     margin: 3%;
 }
 
@@ -137,8 +188,8 @@ h3 {
 }
 
 .gridImg2 {
-    grid-area: img2;
-    margin: 5%;
+    object-fit: cover;
+    margin: 3%;
     border-radius: 14px;
 }
 
@@ -148,17 +199,32 @@ h3 {
     max-height: 100%;
 }
 
-#CSA {
+/* #CSA {
     grid-area: csa;
-    margin: 5%;
+    margin: 20px;
 
 }
 
 #mhs {
     grid-area: mhs;
-    margin: 5%;
+    margin: 20px;
+} */
+
+/* Style for Cards if using divs to create cards for case study */
+
+/* .card1 {
+    border-radius: 14px;
+    border: 1px solid #AAA;
+    background: rgba(139, 112, 65, 0.35);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.card2 {
+    border-radius: 14px;
+    border: 1px solid #AAA;
+    background: rgba(139, 112, 65, 0.35);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+} */
 
 /* <!-- My Work Section Constructed using CSS Grid --> */
 
@@ -166,21 +232,37 @@ h3 {
     .outerDiv {
         flex-direction: column;
     }
-    .flexContainer> * {
+
+    .flexContainer>* {
         width: 100%;
     }
-    .workGrid {
+
+    .workGrid{    
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat (6, 1fr);
+        grid-template-rows: repeat (2, 1fr);
         grid-template-areas:
-            "img" 
-            "csa"
-            "img2"
-            "mhs"
-            "img3" 
-            "cs3";
+            "cs1"
+            "cs2";
         align-items: center;
         justify-content: center;
+    } 
+
+    .content>button {
+        position: inherit;
+    }
+    .card1 {
+        display:block;
+        text-align: center;
+    }
+    .card2 {
+        display: block;
+        text-align: center;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .content>p {
+        width: 90%;
     }
 }
