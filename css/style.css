@@ -5,30 +5,31 @@
 }
 
 .logo {
-    display: inline-block;
-    width: 25%;
-    padding: 1%;
+    width: 30%;
     text-align: center;
     background-color: black;
+    height: 65px;
 }
 
 .logopic {
     display: inline-block;
-    width: 15%;
+    text-align: justify;
+    text-align: start;
+    width: 40px;
+    padding: 5%;
 }
 
 nav {
     width: 70%;
-    padding: 1%;
-    height: fit-content;
+    height:65px;
     background-color: black;
     font-family: 'Playfair Display', serif;
+    margin-left: -4px;
 }
 
 ul {
-    width: 70%;
-    margin-left: auto;
-    color: white;
+    width: auto;
+    color: white;    
 }
 
 li {
@@ -42,13 +43,15 @@ li {
 }
 
 .hero {
-    height: 400px;
+    height: 300px;
 }
 
 .content {
-    width: 500px;
+    width: 400px;
+    padding: 2%;
     margin: 0 auto;
     font-family: 'DM Sans', sans-serif;
+    font-size: small;
     box-shadow: 20px 20px 60px 10px pink inset;
 }
 
@@ -102,6 +105,7 @@ h3 {
     justify-content: center;
     align-items: center;
     border-radius: 14px;
+    font-size: smaller;
     background: #F4F7FA;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -110,7 +114,7 @@ h3 {
 
 .workGrid {
     display: grid;
-    grid-template-columns: 55% 1fr;
+    grid-template-columns: 50% 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         "img csa"
@@ -122,18 +126,20 @@ h3 {
 
 .csaImg {
     grid-area: img;
-    margin: 5%;
+    margin: 3%;
 }
 
 .csaImg>img {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+    border-radius: 14px;
 }
 
 .gridImg2 {
     grid-area: img2;
     margin: 5%;
+    border-radius: 14px;
 }
 
 .gridImg2>img {
